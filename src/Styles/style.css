@@ -64,3 +64,26 @@ h1 {
     border:2px solid #f2f2f2;
     padding: 5px;
 }
+
+.buttonClass {
+        margin: 20px auto;
+        background-color:#000000;
+        border-radius:42px;
+        display:table;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Trebuchet MS;
+        font-size:28px;
+        padding:13px 31px;
+        text-decoration:none;
+    }
+
+.buttonClass:hover {
+        background-color:#000000;
+    }
+    
+.buttonClass:active {
+        position:relative;
+        top:1px;
+    }
+  
