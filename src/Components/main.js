@@ -24,6 +24,7 @@ class Main extends Component {
             }],
         }
         this.removePhoto = this.removePhoto.bind(this);
+        this.addPhoto = this.addPhoto.bind(this);
     }
 
     removePhoto(postsRemoved) {
@@ -37,7 +38,11 @@ class Main extends Component {
         this.setState({
             posts: this.state.posts.concat(postSubbmitted)
         }, () => {
-            this.props.navigate('/');
+            if(this.props.navigate)
+                this.props.navigate('/');
+            else{
+                console.log('Function not available');
+            }
         });
     }
 
@@ -64,7 +69,7 @@ class Main extends Component {
 
 export function APPWithRouter() {
     const navigate = useNavigate();
-    return (<Main navigate={navigate}/>)
+    return <Main navigate={navigate}/>
 }
 
-export default Main
+export default APPWithRouter;
