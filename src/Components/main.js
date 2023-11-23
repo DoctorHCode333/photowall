@@ -72,4 +72,4 @@ export function APPWithRouter() {
     return <Main navigate={navigate}/>
 }
 
-export default APPWithRouter;
+export default Main;
