@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Title from './Title';
 import Photowall from './Photowall';
-import AddPhoto from './addPhoto';
+import AddPhoto from './AddPhoto';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 
-class Main extends Component {      
+class Main extends Component {
     constructor() {
         super();
         this.state = {
             posts: [{
                 id: "0",
-                description: "beautiful landscape",
+                description: "Beautiful Landscape",
                 imageLink: "https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i4eeacaa2dbf12d6d/version/1490299332/most-beautiful-landscapes-in-europe-lofoten-european-best-destinations-copyright-iakov-kalinin.jpg" +
                     "3919321_1443393332_n.jpg"
             }, {
@@ -21,49 +22,48 @@ class Main extends Component {
                 description: "On a vacation!",
                 imageLink: "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2017/08/24/104670887-VacationExplainsTHUMBWEB.1910x1000.jpg"
             }],
-            screen: 'photo'
         }
-        
         this.removePhoto = this.removePhoto.bind(this);
-        this.navigate = this.navigate.bind(this);
     }
 
-    removePhoto(postsRemoved) {      
+    removePhoto(postsRemoved) {
         console.log(postsRemoved.description);
-        this.setState((state)=> ({
+        this.setState((state) => ({
             posts: this.state.posts.filter(post => post !== postsRemoved)
         }))
     }
 
-    navigate(){
-        console.log('Post Added');
+    addPhoto(postSubbmitted) {
         this.setState({
-            screen: 'addPhoto'
+            posts: this.state.posts.concat(postSubbmitted)
         })
     }
 
     render() {
-        return  <div>
-               
-                {
-                    this.state.screen === 'photo' && ( 
-                    <div>
-                        <Title title={'Photo-Wall'} />
-                        <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto} onNavigate={this.navigate}/>
-                    </div>
-                    )
-                }
-                {
-                    this.state.screen === 'addPhoto'&&(
+        return (
+            <Router>
+                <Routes>
+                    <Route exact path="/" element={
                         <div>
-                            <AddPhoto/>
+                            <Title title="Photo-Wall" />
+                            <Photowall posts={this.state.posts} onRemovePhoto={this.removePhoto} />
                         </div>
-                    )
-                }
-
-                </div>
-        
+                    } />
+                    < Route path="/AddPhoto" element={
+                        <AddPhoto onAddPhoto={(addedPhoto) => {
+                            this.addPhoto(addedPhoto);
+                            this.props.navigate('/')
+                        }} />
+                    } />
+                </Routes>
+            </Router>
+        );
     }
+}
+
+export function APPWithRouter(props) {
+    const navigate = useNavigate();
+    return (<Main navigate={navigate}/>)
 }
 
 export default Main
