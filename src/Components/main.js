@@ -5,8 +5,8 @@ import AddPhoto from './AddPhoto';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 
 class Main extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             posts: [{
                 id: "0",
@@ -36,7 +36,9 @@ class Main extends Component {
     addPhoto(postSubbmitted) {
         this.setState({
             posts: this.state.posts.concat(postSubbmitted)
-        })
+        }, () => {
+            this.props.navigate('/');
+        });
     }
 
     render() {
@@ -52,7 +54,6 @@ class Main extends Component {
                     < Route path="/AddPhoto" element={
                         <AddPhoto onAddPhoto={(addedPhoto) => {
                             this.addPhoto(addedPhoto);
-                            this.props.navigate('/')
                         }} />
                     } />
                 </Routes>
@@ -61,7 +62,7 @@ class Main extends Component {
     }
 }
 
-export function APPWithRouter(props) {
+export function APPWithRouter() {
     const navigate = useNavigate();
     return (<Main navigate={navigate}/>)
 }
