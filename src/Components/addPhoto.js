@@ -1,38 +1,31 @@
-import React,{Component} from 'react';
+import React from 'react';
 
-class AddPhoto extends Component{
-
-    constructor(){
-        super();
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleSubmit(event){
+const AddPhoto = (props) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         const imageLink = event.target.elements.link.value;
         const description = event.target.elements.description.value;
         const post = {
-            id: "0",
+            id: Number(new Date()),
             description: description,
             imageLink: imageLink
         }
         if(description && imageLink){
-            this.props.onAddPhoto(post)
+            props.addPost(post)
+            props.navigate('/')
         }
     }
     
-    render(){
         return <div>
             <h1>Photo-Wall</h1>
             <div className='form'>c
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <input type="text" placeholder='Link' name='link'/>
                     <input type="text"  placeholder='Description' name='description'/>
                     <button className='postButton'>Post</button>
                 </form>
             </div>
         </div>
-    }
 }
 
 export default AddPhoto;
