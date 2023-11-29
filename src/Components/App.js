@@ -4,9 +4,12 @@ import {bindActionCreators} from 'redux'
 import * as actions from '../redux/actions'
 function mapStateToProps(state){
     return{
-        posts: state
+        posts: state.postsUpdate,
+        comments: state.comments
     }
 }
+
+
 
 function mapDispatchToProps(dispatch){
     return bindActionCreators({...actions}, dispatch)

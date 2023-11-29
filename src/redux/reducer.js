@@ -1,6 +1,14 @@
 import posts from '../data/posts'
+import { combineReducers } from 'redux'
 
-const postReducer = function postsUpdate(state = posts, action){
+function comments(state=[], action){
+    switch(action.type){
+        case 'ADD_COMMENT': return [...state,action.comment]
+        default: return state
+    }
+}
+
+function postsUpdate(state = posts, action){
     console.log(action.index)
     switch (action.type){
         case 'REMOVE_POST': return [...state].filter(post => post.id !==action.index)
@@ -11,5 +19,5 @@ const postReducer = function postsUpdate(state = posts, action){
     }
 }
 
-
-export default postReducer
+const rootReducer = combineReducers({comments, postsUpdate})
+export default rootReducer

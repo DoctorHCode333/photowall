@@ -2,10 +2,12 @@ import React, { useEffect} from 'react';
 import Title from './Title';
 import Photowall from './Photowall';
 import AddPhoto from './AddPhoto'
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Link} from 'react-router-dom';
 import {removePost} from  '../redux/actions';
 import { useNavigate } from 'react-router-dom';
+import Single from './Single.js';
 //import { useSelector,from useDispatch } from 'react-redux';
+
 
 const Main = (props) => {
     
@@ -16,13 +18,14 @@ const Main = (props) => {
 
     console.log("Hello",props)
         return (
-            
             <div>
+                <h1>
+                    <Link to="/">Photowall</Link>
+                </h1>
                 <Routes>
                     <Route exact path="/" 
                         element={
                             <div>
-                                <Title title="Photo-Wall" />
                                 <Photowall {...props} />
                             </div>
                         } 
@@ -30,6 +33,12 @@ const Main = (props) => {
                      < Route path="/AddPhoto" 
                         element={
                             <AddPhoto {...props} navigate={navigate}/>
+                        }
+                    /> 
+
+                     < Route path="/single/:id" 
+                        element={
+                            <Single {...props}/>
                         }
                     /> 
                 </Routes>

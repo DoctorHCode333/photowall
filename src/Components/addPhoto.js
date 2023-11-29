@@ -17,7 +17,6 @@ const AddPhoto = (props) => {
     }
     
         return <div>
-            <h1>Photo-Wall</h1>
             <div className='form'>c
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder='Link' name='link'/>
