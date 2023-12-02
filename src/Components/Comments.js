@@ -6,6 +6,7 @@ const Comments = (props)=>{
         event.preventDefault();
         const comment = event.target.elements.comment.value
         props.addComment(comment,props.id)
+        event.target.elements.comment.value = ''
     }
     console.log(props.comments)
     return  <div className="comment">

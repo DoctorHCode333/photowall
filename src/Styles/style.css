@@ -83,6 +83,26 @@ h1 a{
   background: red;
 }
 
+.comment-button{
+    margin-top: 19px;
+    font-size: 21px;
+    border: none;
+    font-family:Comic Sans MS;
+    width: 42px;
+    height:42px;
+    border-radius: 42px;
+    color:#fff;
+    font-weight:bold;
+    background:rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comment-button:hover {
+  background: red;
+}
+
 .buttonClass {
         margin: 0px auto 40px; 
         background-color:#000000;

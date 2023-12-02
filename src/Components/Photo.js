@@ -12,12 +12,18 @@ function Photo(props){
             
                     <div className="button-container">
                         <figcaption><p>{post.description}</p></figcaption>
+                        <Link className="comment-button" to={`/single/${post.id}`}>
+                            <div>
+                                {props.comments[post.id] ? props.comments[post.id].length : 0}
+                            </div>
+                        </Link>
                         <button className="remove-button" onClick = {()=> {
                                 props.removePost(props.index);
                                 props.navigate('/')
                             }}> 
                             ☠️
                         </button>
+                       
                     </div>
                 </figure>
         
