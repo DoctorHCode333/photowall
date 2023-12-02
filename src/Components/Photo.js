@@ -4,20 +4,23 @@ import { Link } from "react-router-dom";
 
 function Photo(props){
         const post = props.post;
-        return <figure className="figure">
-                <Link to={`/single/${post.id}`}>
-                    <img className="photo" src={post.imageLink} alt={post.description}/>
-                </Link>
+
+        return  <figure className="figure">
+                    <Link to={`/single/${post.id}`}>
+                        <img className="photo" src={post.imageLink} alt={post.description}/>
+                    </Link>
+            
+                    <div className="button-container">
+                        <figcaption><p>{post.description}</p></figcaption>
+                        <button className="remove-button" onClick = {()=> {
+                                props.removePost(props.index);
+                                props.navigate('/')
+                            }}> 
+                            ☠️
+                        </button>
+                    </div>
+                </figure>
         
-                <div className="button-container">
-                    <figcaption><p>{post.description}</p></figcaption>
-                    <button className="remove-button" onClick = {()=> {
-                            props.removePost(props.index);
-                        }}> 
-                        ☠️
-                    </button>
-                </div>
-            </figure>
 }
 
 Photo.propTypes = {

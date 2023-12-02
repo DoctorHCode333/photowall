@@ -5,8 +5,9 @@ const Comments = (props)=>{
     const handleSubmit = (event)=>{
         event.preventDefault();
         const comment = event.target.elements.comment.value
-        props.addComment(comment)
+        props.addComment(comment,props.id)
     }
+    console.log(props.comments)
     return  <div className="comment">
         {
             props.comments.map((comment,index) => {
