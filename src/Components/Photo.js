@@ -12,17 +12,25 @@ function Photo(props){
             
                     <div className="button-container">
                         <figcaption><p>{post.description}</p></figcaption>
+                        <div>
                         <Link className="comment-button" to={`/single/${post.id}`}>
                             <div>
                                 {props.comments[post.id] ? props.comments[post.id].length : 0}
                             </div>
+                            <div className="comment-chat">
+                                <img src="https://static.thenounproject.com/png/638755-200.png" alt="" />
+                            </div>
                         </Link>
                         <button className="remove-button" onClick = {()=> {
                                 props.removePost(props.index);
-                                props.navigate('/')
+                                setTimeout(() => {
+                                    
+                                  }, 1000);
+                                  props.navigate('/')
                             }}> 
                             ☠️
                         </button>
+                        </div>
                        
                     </div>
                 </figure>

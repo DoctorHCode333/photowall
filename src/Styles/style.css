@@ -68,6 +68,7 @@ h1 a{
 
 .remove-button{
     margin-top: 19px;
+    margin-bottom: 10px;
     font-size: 21px;
     border: none;
     font-family:Comic Sans MS;
@@ -202,7 +203,7 @@ h1 a{
 
 .single-photo {
     width: 900px;
-    max-height: 390px;
+    max-height: 550px;
     margin: 0 auto;
     display: flex;
     background: #fff;
@@ -243,7 +244,7 @@ h1 a{
 .comment{
     width: 40%;
     display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    flex-direction: column;
    overflow: scroll;
    border-radius: 15px;
@@ -253,7 +254,9 @@ h1 a{
 
 .comment p {
     border-bottom: 1px solid #d3d3d3;
-    padding: 0.5rem 0;
+    padding: 0;
+    margin: 10px 0px;
+    font-size: 1.5rem;
 }
 
 .comment-form{
@@ -264,9 +267,21 @@ h1 a{
 .comment-form textarea {
     width: 97%;
     border: 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
     border-bottom: 1px solid #d3d3d3;
     outline: none;
     resize: vertical;
 } 
+
+.comment-chat{
+    position: relative;
+}
+
+.comment-chat img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -19px;
+    top: -24px
+}

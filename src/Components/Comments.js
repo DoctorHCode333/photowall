@@ -6,19 +6,23 @@ const Comments = (props)=>{
         event.preventDefault();
         const comment = event.target.elements.comment.value
         props.addComment(comment,props.id)
-        event.target.elements.comment.value = ''
+        event.target.elements.comment.value = "";
     }
-    console.log(props.comments)
     return  <div className="comment">
-        {
-            props.comments.map((comment,index) => {
-                return <p key={index}> {comment} </p>
-            })
-        }
-                <form className="comment-form" onSubmit={handleSubmit}>
-                    <input type='text' placeholder="comment" name="comment"/>
-                    <input type='submit' hidden/>
-                </form>
+                <div>
+                    {
+                        props.comments.map((comment,index) => {
+                            return <p key={index}> {comment} </p>
+                        })
+                    }
+                </div>
+                <div>
+                    <form className="comment-form" onSubmit={handleSubmit}>
+                                <input type='text' placeholder="comment" name="comment"/>
+                                <input type='submit' hidden/>
+                    </form>
+                </div>
+                
             </div>
 }
 

@@ -17,7 +17,7 @@ const AddPhoto = (props) => {
     }
     
         return <div>
-            <div className='form'>c
+            <div className='form'>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder='Link' name='link'/>
                     <input type="text"  placeholder='Description' name='description'/>
