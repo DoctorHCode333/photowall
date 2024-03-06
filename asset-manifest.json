@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DoctorHCode333/photowall/static/css/main.f7e02e83.css",
+    "main.js": "/DoctorHCode333/photowall/static/js/main.8adb1e36.js",
+    "index.html": "/DoctorHCode333/photowall/index.html",
+    "main.f7e02e83.css.map": "/DoctorHCode333/photowall/static/css/main.f7e02e83.css.map",
+    "main.8adb1e36.js.map": "/DoctorHCode333/photowall/static/js/main.8adb1e36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7e02e83.css",
+    "static/js/main.8adb1e36.js"
+  ]
+}
