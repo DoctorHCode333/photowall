@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://github.com/DoctorHCode333/photowall/tree/gh-pages",
+  "homepage": "photowall",
   "eslintConfig": {
     "extends": [
       "react-app",

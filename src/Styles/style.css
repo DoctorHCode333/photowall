@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/6d32b8e06f40fb7698cfb714b9e7975d?family=Billabong+W00+Regular);
+
 html {
     font-size: 10px;
     font-family: sans-serif;
@@ -12,7 +14,7 @@ figcaption p{
 }
 
 h1 {
-    font-family: 'Billabong W00 Regular';
+    font-family: "Billabong W00 Regular";
     text-align: center; 
     font-size: 17rem;
     font-weight: 100;
