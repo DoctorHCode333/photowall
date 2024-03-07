@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/DoctorHCode333/photowall/tree/gh-pages/static/css/main.f7e02e83.css",
-    "main.js": "/DoctorHCode333/photowall/tree/gh-pages/static/js/main.bdcc5819.js",
-    "index.html": "/DoctorHCode333/photowall/tree/gh-pages/index.html",
-    "main.f7e02e83.css.map": "/DoctorHCode333/photowall/tree/gh-pages/static/css/main.f7e02e83.css.map",
-    "main.bdcc5819.js.map": "/DoctorHCode333/photowall/tree/gh-pages/static/js/main.bdcc5819.js.map"
+    "main.css": "/DoctorHCode333/photowall/static/css/main.f7e02e83.css",
+    "main.js": "/DoctorHCode333/photowall/static/js/main.bdcc5819.js",
+    "index.html": "/DoctorHCode333/photowall/index.html",
+    "main.f7e02e83.css.map": "/DoctorHCode333/photowall/static/css/main.f7e02e83.css.map",
+    "main.bdcc5819.js.map": "/DoctorHCode333/photowall/static/js/main.bdcc5819.js.map"
   },
   "entrypoints": [
     "static/css/main.f7e02e83.css",
