@@ -14,23 +14,23 @@ const Main = (props) => {
         return (
             <div>
                 <h1>
-                    <Link to="/">Photowall</Link>     
+                    <Link to="">Photowall</Link>     
                 </h1>
                 <Routes>
-                    <Route exact path="/" 
+                    <Route exact path="" 
                         element={
                             <div>
                                 <Photowall {...props} navigate={navigate}/>
                             </div>
                         } 
                     />
-                     < Route path="/AddPhoto" 
+                     < Route path="AddPhoto" 
                         element={
                             <AddPhoto {...props} navigate={navigate}/>
                         }
                     /> 
 
-                     < Route path="/single/:id" 
+                     < Route path="single/:id" 
                         element={
                             <Single {...props} navigate={navigate}/>
                         }

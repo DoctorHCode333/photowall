@@ -6,14 +6,14 @@ function Photo(props){
         const post = props.post;
 
         return  <figure className="figure">
-                    <Link to={`/single/${post.id}`}>
+                    <Link to={`/Single/${post.id}`}>
                         <img className="photo" src={post.imageLink} alt={post.description}/>
                     </Link>
             
                     <div className="button-container">
                         <figcaption><p>{post.description}</p></figcaption>
                         <div>
-                        <Link className="comment-button" to={`/single/${post.id}`}>
+                        <Link className="comment-button" to={`/Single/${post.id}`}>
                             <div>
                                 {props.comments[post.id] ? props.comments[post.id].length : 0}
                             </div>
