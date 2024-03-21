@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 function Photowall(props){
     const tempPost = [...props.posts];
         return <div>
-            <Link className='buttonClass'  to="AddPhoto">Click Me</Link>
+            <Link className='buttonClass'  to="AddPhoto">+</Link>
             <div className="photo-grid">
                 {tempPost
                 .sort(function(x, y){

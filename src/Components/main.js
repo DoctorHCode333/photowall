@@ -12,7 +12,7 @@ const Main = (props) => {
     const navigate = useNavigate();
    
         return (
-            <div>
+            <div className='mainBody'>
                 <h1>
                     <Link to="">Photowall</Link>     
                 </h1>
