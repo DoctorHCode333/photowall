@@ -37,10 +37,10 @@
 # Getting Started:
   To run the PhotoWall app locally, follow these steps:
 
-  Clone this repository to your local machine.
-  
-  Install dependencies using npm install.
-  
-  Start the development server using npm start.
-  
-  Open your browser and navigate to http://localhost:3000 to view the app.
+    Clone this repository to your local machine.
+    
+    Install dependencies using npm install.
+    
+    Start the development server using npm start.
+    
+    Open your browser and navigate to http://localhost:3000 to view the app.
