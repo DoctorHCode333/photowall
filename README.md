@@ -1,7 +1,9 @@
-#PhotoWall App
-PhotoWall is a beautiful single-page application (SPA) built using React.js, Redux, Firebase, and advanced state management techniques. It allows users to create a personalized wall of photos with descriptions, view and delete photos, leave comments on individual photos, and store data securely in the cloud.
+# PhotoWall App
 
-#Technologies Used:
+  PhotoWall is a beautiful single-page application (SPA) built using React.js, Redux, Firebase, and advanced state management techniques. It allows users to create a personalized wall of photos with descriptions, view and delete photos, leave comments on individual photos, and store data securely in the cloud.
+
+# Technologies Used:
+
   React.js: A JavaScript library for building user interfaces.
   Redux: A predictable state container for JavaScript apps.
   Redux Store: Used for advanced state management, allowing for a centralized store of application state.
@@ -11,13 +13,16 @@ PhotoWall is a beautiful single-page application (SPA) built using React.js, Red
   mapStateToProps: A function used with connect() to specify which parts of the Redux state should be mapped to props in a component.
   mapDispatchToProps: A function used with connect() to specify which action creators should be mapped to props in a component.
   Firebase: A comprehensive platform provided by Google for building web and mobile applications. It offers authentication, real-time database, cloud storage, and more.
-#Functionality:
+  
+# Functionality:
+
   Add Photo: Users can upload photos along with descriptions to create a personalized photo wall.
   Display Photos: Uploaded photos are displayed on the photo wall, allowing users to view them.
   Delete Photo: Users can delete individual photos from the photo wall.
   Leave Comments: Users can leave comments on individual photos to share their thoughts or feedback.
   Secure Cloud Storage: Photos and associated data are securely stored in Firebase Cloud Storage, ensuring reliability and scalability.
-#Getting Started:
+  
+# Getting Started:
   To run the PhotoWall app locally, follow these steps:
 
   Clone this repository to your local machine.
