@@ -240,8 +240,7 @@ h1 a {
 
 
 .single-photo {
-    width: 900px;
-    max-height: 550px;
+    width:700px;
     margin: 0 auto;
     display: flex;
     background: #fff;
@@ -251,7 +250,7 @@ h1 a {
 }
 
 
-.single-photo .figure {
+/* .single-photo .figure {
     box-shadow: none;
     margin: 0 10px 0 0;
     border: 0;
@@ -262,13 +261,9 @@ h1 a {
 
 .single-photo .photo {
     width: 100%;
-    max-height: 200px;
-
     margin: 0;
-    /* padding: 30px; 
-    margin: 50px; */
     border-radius: 15px;
-}
+} */
 
 .single-photo .button-container {
     display: flex;
